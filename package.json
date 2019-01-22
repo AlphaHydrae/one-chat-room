@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "cross-env DEBUG=one-chat-room:* nodemon ./bin/www",
     "mocha": "mocha tests/**/*.test.js",
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "test": "npm run mocha"
   },
   "dependencies": {
     "chalk": "^2.4.2",

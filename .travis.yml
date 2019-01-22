@@ -1,11 +1,16 @@
 language: node_js
-
 node_js:
-  - "10"
+- '10'
 
 services:
-  - mongodb
+- mongodb
 
 before_script:
-  - npm start &   # Run the application in the background
-  - sleep 5       # Give it time to start
+- npm start &
+- sleep 5
+
+deploy:
+  provider: heroku
+  app: ad-simon-oulevay-chat
+  api_key:
+    secure: UkFOGP8ELYNfgmjzaC3uH2Np28C/wcKzGYBqn1mGTyBPSeTh1aoJF3fiW+uLyMVmQwpJOmNtyLN3waURfOWWrZL/ODblnGxKkw5yWfMT8XYwD7a/WgAkj9VPJ+ZldssVK0fzj5oM51XoQTOT2HXGIUGOdXbWdXmQW82VS+oKNG1mBS6fEcKgMU2eWfO/Bhs65RtaQg4p39m9LXvXTO1fHBCjpoEHKmDQX2uJ/+/sTRbqiXM/iNnKWCpRnFfgTnwNZKL04lDXVntlNnQxMNMbQ3NyPWnrjXyQFixTOS9oDDkSNErupv/R3FEuWPsHvHDkjvXimTXKoyEkoZlaPITnK20wtecgrDasjSfh6IXtSBsJ8GuNO8gtRIbL+2G7Ps4y49B7Jn3e+Q39oFZFi6SDMySKOLqFvAZmA6pTYSxUqQlsa2owl5nwLu/GeFw8yow6LL+K+nioYI7OLkzPZbcIVkMsCSJSXajH9A3FKnlTYFgk5BdGVVuVTSUAyuKvkj5Lqhrk1cyjUhOcFvxKdrypWxcc37T/rouR/MmaGIN1JgwtGnZZq4WA4sQsTYWLUhkxAgfZnNKZ267qGdtv8pLLc3v4EZ1tgKngbtk4v7fCbsMLwp+RHg9mXbQ1+mcvOiYGFmX+oH4haHAu6O7Ga2sW3DK6EIfXUxST4tCRuv/M2q8=
